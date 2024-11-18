@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/popup/popup.css">
+    <title>VAC Checker</title>
+</head>
+
+<body>
+    <header>
+        <img src="/images/vac-check-logo.png">
+    </header>
+    <div id="apiKeyInput">
+        <label for="apiKey">Enter your Steam API Key</label>
+        <input type="password" id="apiKey" placeholder="API Key">
+        <sup>Don't have an API key? <a href="https://steamcommunity.com/dev/apikey" target="_blank"
+                title="Steam API Key Registration">Click here</a></sup>
+        <button id="saveKey">Save Key</button>
+    </div>
+    <div id="actionButtons" class="hidden">
+        <button id="startCheck">Check My Friends</button>
+        <button id="resetKey">Reset API Key</button>
+    </div>
+    <div id="warning" class="hidden">
+        <p class="warning-icon">⚠️</p>
+        <p>Please visit your <a href="https://steamcommunity.com/my/friends/" target="_blank">Steam friends page</a>.
+        </p>
+    </div>
+    <sub>VAC-Check is in no way affiliated with Valve or Steam. This tool is independantly developed. No information is
+        transferred outside of your own browser.</sub>
+    <script src="/popup/popup.js"></script>
+</body>
+
+</html>

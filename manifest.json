@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "VAC Checker",
+    "version": "1.0",
+    "description": "Check your friends' VAC ban status on Steam.",
+    "permissions": [
+        "storage",
+        "scripting",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://api.steampowered.com/*"
+    ],
+    "background": {
+        "service_worker": "background/background.js"
+    },
+    "action": {
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "images/icon-16.png",
+            "48": "images/icon-48.png",
+            "128": "images/icon-128.png"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://steamcommunity.com/id/*/friends"
+            ],
+            "js": [
+                "content/content.js"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "images/icon-16.png",
+        "48": "images/icon-48.png",
+        "128": "images/icon-128.png"
+    }
+}
